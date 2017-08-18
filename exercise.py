@@ -3,7 +3,6 @@ import urllib.request
 url1 = 'http://m.weather.com.cn/data3/city.xml'
 content1 = urllib.request.urlopen(url1).read().decode('utf8')
 provinces = content1.split(',')
-print ('======',provinces)#获得每个省的编号如01|北京
 result = 'city = {\n'
 url = 'http://m.weather.com.cn/data3/city%s.xml'
 for p in provinces[1:]:
